@@ -1,3 +1,6 @@
 <body>
-<?php echo "Mój pierwszy skrypt" ?>
+<?php 
+include 'pierwszy.php';
+include 'drugi.php';
+?>
 </body>
