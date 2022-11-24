@@ -15,6 +15,7 @@
                 <?php
                     include 'src/funkcje.php';
                     include 'src/tablice.php';
+                    include 'src/tekst.php';
                 ?>
             </div>
         </div>
