@@ -37,7 +37,20 @@ class CelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $this->validate($request, [
+              'nazwa' => 'required'
+            ]);
+        
+            // Stworzenie celu
+            $cel = new Cel;
+            $cel->nazwa = $request->input('nazwa');
+            $cel->tresc = $request->input('tresc');
+            $cel->termin = $request->input('termin');
+        
+            $cel->save();
+        
+            return redirect('/')->with('success', 'Cel dodany!');
+    
     }
 
     /**
@@ -86,4 +99,6 @@ class CelController extends Controller
     {
         //
     }
+
+
 }
